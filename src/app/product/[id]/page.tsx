@@ -97,7 +97,7 @@ export default function ProductDetailPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
             >
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl md:text-3xl font-bold">Product Details</h1>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl md:text-3xl font-bold">Product Details</h2>
                 <p className="text-gray-600 text-sm mt-2 sm:mt-3">
                     <Link href="/">Home</Link> &gt; <Link href="/products">All Products</Link> &gt; <span className="text-blue-500">Product Details</span>
                 </p>
