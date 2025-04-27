@@ -31,6 +31,7 @@ export default function CheckoutPage() {
     const [errorMessage, setErrorMessage] = useState('');
     const [orderId, setOrderId] = useState('');
     const [address, setAddress] = useState('');
+    const [checkoutAmount, setCheckoutAmount] = useState(0);
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm<CheckoutForm>({
         resolver: zodResolver(checkoutSchema),
@@ -61,6 +62,8 @@ export default function CheckoutPage() {
 
     const handleCheckout = async (data: CheckoutForm) => {
         try {
+            setCheckoutAmount(totalAmount);
+
             if (cartItems.length === 0) {
                 setErrorMessage('Your cart is empty!');
                 setOpenError(true);
@@ -78,7 +81,7 @@ export default function CheckoutPage() {
                 courier: data.courier,
                 address: data.address,
                 advance: null,
-                cod_amount: subtotal,
+                cod_amount: totalAmount,
                 discount_amount: null,
                 delivery_charge: deliveryCharge(data.address),
             });
@@ -230,7 +233,7 @@ export default function CheckoutPage() {
                             <strong>Order ID:</strong> #{orderId}
                         </Typography>
                         <Typography variant="subtitle1">
-                            <strong>Total Amount:</strong> ৳{totalAmount}
+                            <strong>Total Amount:</strong> ৳{checkoutAmount}
                         </Typography>
                         <Typography variant="subtitle2" color="text.secondary">
                             Thank you for shopping with CloudCore Store.
