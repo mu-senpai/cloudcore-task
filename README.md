@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+# CloudCore Store
+
+CloudCore Store is a premium e-commerce platform offering high-quality jackets and hoodies. This store is designed for style, comfort, and durability, providing a seamless shopping experience with integrated payment and dynamic product management.
+
+## Features
+
+- **Product Listings**: Browse various premium jackets and hoodies.
+- **Product Details**: Detailed view of each product including description, price, size availability, and stock.
+- **Add to Cart**: Users can add items to their cart, modify quantities, and proceed to checkout.
+- **Dynamic Category Filtering**: Filter products by category.
+- **Search Functionality**: Search products by name, unique ID, or category.
+- **Responsive Design**: Fully responsive, ensuring a great user experience across devices.
+- **Animations**: Smooth animations with Framer Motion for UI transitions.
+- **Checkout Process**: A streamlined checkout process that integrates with an order creation API.
+
+## Technologies Used
+
+- **Next.js (15.3.1)**: A React framework for building static and dynamic websites.
+- **React-Redux**: For global state management.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Material UI**: React UI framework for faster, easier web development.
+- **Framer Motion**: For animations and interactive UI transitions.
+- **Zod**: Schema validation for form inputs.
+- **React Hook Form**: For handling forms and validation.
+- **Axios**: For making API calls.
+- **PostCSS & TailwindCSS**: For styling and CSS build processes.
+
+## Project Structure
+
+```bash
+/src/
+├── app/
+│   ├── (home)/
+│   │   └── page.tsx
+│   ├── checkout/
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── Banner.tsx
+│   │   ├── FeaturedProducts.tsx
+│   │   ├── Newsletter.tsx
+│   │   ├── ProductCard.tsx
+│   ├── product/[id]/
+│   │   └── page.tsx
+│   ├── products/
+│   │   └── page.tsx
+├── favicon.ico
+├── globals.css
+├── head.tsx
+├── layout.tsx
+└── page.module.css
+/lib/
+├── features/
+│   ├── cartSlice.ts
+│   ├── productsSlice.ts
+├── store.ts
+├── utils/
+│   ├── api.ts
+│   └── apiFunctions.ts
+└── validation/
+    └── checkoutFormSchema.ts
+/component/
+└── common/
+    ├── Footer.tsx
+    ├── Navbar.tsx
+    └── LayoutWrapper.tsx
+```
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    ```bash
+    git clone https://github.com/yourusername/cloudcore-task.git
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    Navigate into the project directory and run:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    npm install
+    ```
 
-## Learn More
+3. **Run the development server:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm run dev
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Now open your browser and go to `http://localhost:3000` to view the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Build and start for production:**
 
-## Deploy on Vercel
+    To create a production build:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm run build
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    Then, to start the production server:
+
+    ```bash
+    npm run start
+    ```
+
+## Project Structure Breakdown
+
+- **`/app`**: Contains all the pages like home, checkout, and product details.
+- **`/components`**: Reusable UI components like `Banner`, `ProductCard`, `FeaturedProducts`, and `Newsletter`.
+- **`/public`**: Contains static assets like `favicon.ico` and images.
+- **`/lib`**: Contains hooks and state management logic (e.g., `store.ts`, `productsSlice.ts`).
+- **`/utils`**: Contains utility functions like API helpers (`api.ts`, `apiFunctions.ts`).
+- **`/validation`**: Contains validation schemas (e.g., `checkoutFormSchema.ts`).
+
+## Future Enhancements
+
+- Add user authentication (Sign Up/Sign In).
+- Integrate payment gateway for processing orders.
+- User reviews and ratings for products.
+- Admin dashboard for managing products and orders.
+
+## Contributing
+
+Feel free to fork the repository, submit issues, and pull requests. Contributions are welcome! 
+
+To contribute:
+1. Fork the repository
+2. Create your branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to your branch (`git push origin feature-name`)
+5. Open a pull request
+
+
+## Contact
+
+If you have any questions or suggestions, feel free to contact me at muhitabdullah279@gmail.com.
