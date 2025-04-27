@@ -26,9 +26,9 @@ export default function Banner() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
             >
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                     Welcome to CloudCore Store!
-                </h1>
+                </h2>
                 <p className="text-sm sm:text-lg lg:text-xl text-gray-600">
                     Discover the best premium jackets and hoodies designed for ultimate comfort and style.
                 </p>
