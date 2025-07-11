@@ -17,7 +17,7 @@ export default function Banner() {
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <section className="flex flex-col md:flex-row items-center justify-between p-6 pb-16 sm:pb-12 sm:p-12 gap-16 md:gap-0 bg-blue-50 overflow-hidden relative">
+        <section className="flex flex-col md:flex-row items-center justify-between p-6 pb-16 sm:pb-12 sm:p-12 2xl:p-20 2xl:pb-20 gap-16 md:gap-0 bg-blue-50 overflow-hidden relative">
 
             {/* Left Section: Text */}
             <motion.div
