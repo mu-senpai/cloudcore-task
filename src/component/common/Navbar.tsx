@@ -29,6 +29,20 @@ export default function Navbar() {
 
     const drawerList = (
         <div className="w-64" role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+            {/* Logo Section */}
+            <div className="flex justify-center p-4">
+                <Link href="/">
+                    <Image
+                        src="/cloudcore_store.png"
+                        alt="CloudCore Logo"
+                        width={120}
+                        height={60}
+                        className="object-contain"
+                    />
+                </Link>
+            </div>
+            
+            {/* Navigation List */}
             <List>
                 <Link href="/products">
                     <ListItem disablePadding>
@@ -87,7 +101,6 @@ export default function Navbar() {
                             </IconButton>
                         </div>
                     </div>
-
                 </Toolbar>
             </AppBar>
 
