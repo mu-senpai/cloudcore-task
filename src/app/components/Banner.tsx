@@ -18,7 +18,7 @@ export default function Banner() {
 
     return (
         <section className="flex flex-col md:flex-row items-center justify-between p-6 pb-16 sm:pb-12 sm:p-12 gap-16 md:gap-0 bg-blue-50 overflow-hidden relative">
-            
+
             {/* Left Section: Text */}
             <motion.div
                 className="w-full md:w-[60%] lg:w-[65%] space-y-4 sm:space-y-5"
@@ -83,7 +83,7 @@ export default function Banner() {
 
                     <motion.div
                         className="absolute bottom-4 left-0 bg-white p-2 rounded-full shadow-md inline-flex items-center justify-center"
-whileInView={{ y: [0, 5, 0] }}
+                        whileInView={{ y: [0, 5, 0] }}
                         transition={{ repeat: Infinity, duration: 2.5 }}
                     >
                         <FavoriteIcon color="error" fontSize="small" />

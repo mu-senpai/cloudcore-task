@@ -92,7 +92,7 @@ export default function Navbar() {
             </AppBar>
 
             {/* Mobile Drawer */}
-            <Drawer anchor="top" open={drawerOpen} onClose={toggleDrawer(false)}>
+            <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
                 {drawerList}
             </Drawer>
         </>

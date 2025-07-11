@@ -16,7 +16,7 @@ export default function ProductDetailPage() {
     const dispatch = useDispatch<AppDispatch>();
     const { products, loading } = useSelector((state: RootState) => state.products);
     const theme = useTheme();
-    const isMediumScreen = useMediaQuery(theme.breakpoints.down(768));
+    const isMediumScreen = useMediaQuery(theme.breakpoints.down(1024));
 
     const [product, setProduct] = useState<Product | null>(null);
     const [stock, setStock] = useState(0);
@@ -104,7 +104,7 @@ export default function ProductDetailPage() {
             </motion.div>
 
             {/* Product Main Content */}
-            <div className="flex flex-col md:flex-row gap-8 lg:gap-10 xl:gap-16 justify-center items-center">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-16 justify-center items-start lg:items-center">
 
                 {/* Image */}
                 <motion.div
@@ -115,15 +115,15 @@ export default function ProductDetailPage() {
                     <Image
                         src={imageUrl}
                         alt={product.name}
-                        width={isMediumScreen ? 768 : 400}
+                        width={isMediumScreen ? 1024 : 450}
                         height={400}
-                        className="w-full rounded-lg object-cover"
+                        className="rounded-lg object-cover"
                     />
                 </motion.div>
 
                 {/* Info */}
                 <motion.div
-                    className="flex flex-col gap-4 md:gap-5 max-w-lg"
+                    className="flex flex-col gap-4 md:gap-5 max-w-2xl lg:max-w-lg"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
